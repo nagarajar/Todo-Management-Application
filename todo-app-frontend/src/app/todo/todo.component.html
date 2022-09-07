@@ -1,0 +1,30 @@
+<h1>Todo</h1>
+<div class="container">
+    <!-- the form is added to validate the data
+    * ngSubmit is used to submit the form after click on botton or click on enter keyword
+    * ngForm is used to provide a validation by default to form
+    * we can submit the form only when we provide valid values not null values
+    -->
+    <div class="alert alert-warning" *ngIf=" todoForm.dirty && todoForm.invalid">Enter Valid Values</div>
+    <div class="alert alert-warning" *ngIf=" todoForm.dirty && description.invalid">Enter atleast 5 characters in Description</div>
+    <div class="alert alert-warning" *ngIf=" todoForm.dirty && targetDate.invalid">Enter Valid Target Date</div>
+
+    <form (ngSubmit)="!todoForm.invalid && saveTodo()" #todoForm="ngForm">
+        <fieldset class="form-group">
+            <label>Description</label>
+            <input type="text" #description="ngModel"
+            [(ngModel)]="todo.description" class="form-control" name="description" required="required"
+            minlength="5">
+        </fieldset>
+        
+        <fieldset class="form-group">
+            <label>Target Date</label>
+        <input type="date" #targetDate="ngModel"
+        [ngModel]="todo.targetDate | date:'yyyy-MM-dd'" 
+        (ngModelChange)="todo.targetDate = $event"
+        class="form-control" name="targetDate" required="required">
+        </fieldset>
+
+        <button class="btn btn-success" type="submit">Save</button>
+    </form>
+</div>
