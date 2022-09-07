@@ -1,0 +1,13 @@
+CRUD Operations on TODO list of User
+
+1. Retrieve all Todos for a User
+   GET /users/{user_name}/todos
+
+2. Delete a Todo of a User
+   DELETE /users/{user_name}/todos/{todo_id}
+
+3. Edit/Update a Todo
+   PUT /users/{user_name}/todos/{todo_id}
+
+4. Create a new Todo
+   POST /users/{user_name}/todos/

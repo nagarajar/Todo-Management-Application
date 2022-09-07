@@ -1,0 +1,4 @@
+insert into todo(id, username, description, target_date, is_done) values
+(1001,'in28minutes','Learn JPA', CURRENT_DATE(), false),
+(1002,'Ranga','Learn hibernet', SYSDATE(), false),
+(1003,'Naga','Learn spring', SYSDATE(), false);

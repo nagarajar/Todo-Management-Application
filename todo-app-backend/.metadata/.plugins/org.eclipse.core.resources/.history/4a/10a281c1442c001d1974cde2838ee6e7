@@ -1,0 +1,5 @@
+package com.todo.app.rest.webservices.todo;
+
+public interface TodoJpaRepository {
+
+}
