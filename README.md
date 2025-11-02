@@ -1,7 +1,7 @@
 # Todo-Management-Application
 Full Stack Web Application with Spring boot and Angular
 
-## Functionality:
+## Description:
 A full stack web application with Spring Boot and Angular, which helps to maintain our day-to-day 
 tasks or list everything that we have to do. It is helpful in planning our daily schedules. We can add more tasks, 
 modify tasks at any time and delete a task that is completed.
